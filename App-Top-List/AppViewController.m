@@ -8,8 +8,12 @@
 
 #import "AppViewController.h"
 #import "AppWebViewController.h"
+#import <AFNetworking.h>
 
 @interface AppViewController ()
+
+
+@property (strong, nonatomic) NSMutableArray *arrayM;
 
 @end
 
@@ -17,16 +21,14 @@
 @implementation AppViewController
 
 
-
-
-
 -(id)initWithModel: (AppModel*) aModel{
     
-    if (self = [super initWithNibName:@"AppViewController"
+    if (self = [super initWithNibName:nil
                                bundle:nil]) {
         _model = aModel;
-        self.title = @"iTunes Store: Top Free Apps";
     }
+    self.title = self.model.imName;
+    
     return self;
 }
 
@@ -36,16 +38,22 @@
     
     [self syncModelWithView];
     
-    self.scrollView.scrollEnabled = YES;
-   
     
-    NSLog(@"view appear ");
+    
+ 
+  
 }
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    self.scrollView.contentSize = self.subView.frame.size;
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,19 +66,20 @@
 
 -(void)syncModelWithView{
     
-    
     self.name.text = self.model.imName;
     self.summary.text = self.model.summary;
     self.rights.text = self.model.rights;
     self.companyName.text = self.model.company;
-    self.iconImage.image = self.model.imImage;
+    self.iconImage.image = self.model.photo;
     self.releaseDate.text = self.model.releaseDate;
     self.category.text = self.model.category;
     
+  
+    
     [self.summary setNumberOfLines:0];
     
-    
-    
+
+
     
 }
 

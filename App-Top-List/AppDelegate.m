@@ -26,18 +26,13 @@
     AppGroupModel *groupModel = [[AppGroupModel alloc] init];
 
     
-    AppListTableViewController *tableVC = [[AppListTableViewController alloc] initWithModel:groupModel
+    AppListTableViewController *appGroupVC = [[AppListTableViewController alloc] initWithModel:groupModel
                                                                                       Style:UITableViewStylePlain];
     
+
+    UINavigationController *tabVC = [[UINavigationController alloc] initWithRootViewController:appGroupVC];
     
-   // AppCollectionViewController *collTableVC = [[AppCollectionViewController alloc] initWithModel:groupModel];
     
-    
-    
-    AppViewController *VC = [[AppViewController alloc] initWithModel:[groupModel appCounAtIndex:0]];
-    
-    UINavigationController *tabVC = [[UINavigationController alloc] initWithRootViewController:tableVC];
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:VC];
     
     self.window.rootViewController = tabVC;
     

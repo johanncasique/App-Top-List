@@ -7,12 +7,31 @@
 //
 
 #import "AppModel.h"
+#import <AFNetworking.h>
 
 @implementation AppModel
 
+
+@synthesize photo = _photo;
+
+
+-(UIImage *) photo{
+    
+    if (_photo == nil) {
+        _photo = [UIImage imageWithData:[NSData dataWithContentsOfURL:self.imImage]];
+    }
+    
+    return _photo;
+    
+}
+
+
+
+
+
 +(id)appModelWithName: (NSString *) anImName
               summary: (NSString *) aSummary
-              imImage: (UIImage*) anImImage
+              imImage: (NSURL*) anImImage
         appCompanyWeb: (NSURL*) anAppCompanyWeb
                rights: (NSString *) aRights
              category: (NSString *) aCategory
@@ -35,7 +54,7 @@
 
 -(id) initWithImName: (NSString *) anImName
              summary: (NSString *) aSummary
-             imImage: (UIImage*) anImImage
+             imImage: (NSURL*) anImImage
        appCompanyWeb: (NSURL*) anAppCompanyWeb
               rights: (NSString *) aRights
             category: (NSString *) aCategory
@@ -61,27 +80,39 @@
 
 -(id)initWithDictionary: (NSDictionary*) aDict{
     
-    return [self initWithImName:[aDict objectForKey:@"im:name"]
-                        summary:[aDict objectForKey:@"summary"]
-                        imImage:nil
-                  appCompanyWeb:nil
-                         rights:nil
-                       category:nil
-                        company:nil
-                    releaseDate:nil];
+    return [self initWithImName:[[aDict objectForKey:@"im:name"] objectForKey:@"label"]
+                        summary:[[aDict objectForKey:@"summary"] objectForKey:@"label"]
+                        imImage: [NSURL URLWithString:[[[aDict objectForKey:@"im:image"] objectAtIndex:1] objectForKey:@"label"] ]
+                  appCompanyWeb:[NSURL URLWithString:[[aDict objectForKey:@"id" ] objectForKey:@"label" ]]
+                         rights:[[aDict objectForKey:@"rights"] objectForKey:@"label"]
+                       category:[[[aDict objectForKey:@"category"] objectForKey:@"attributes"] objectForKey:@"label"]
+                        company:[[aDict objectForKey:@"im:artist"] objectForKey:@"label"]
+                    releaseDate:[[[aDict objectForKey:@"im:releaseDate"] objectForKey:@"attributes"]  objectForKey:@"label"] ];
 }
 
 
 
-                                 
-                                 
-                                 
-                                 
-                                 
-                                 
-                                 
-                                 
-                                 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                  
                                  
                                  

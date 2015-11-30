@@ -11,8 +11,10 @@
 
 @interface AppModel : NSObject
 
+
+@property (copy, nonatomic, readonly) UIImage *photo;
 @property (copy, nonatomic) NSString *imName;
-@property (strong, nonatomic) UIImage *imImage;
+@property (strong, nonatomic) NSURL *imImage;
 @property (strong, nonatomic) NSString *summary;
 @property (strong, nonatomic) NSURL *appCompanyWeb;
 @property (strong, nonatomic) NSString *rights;
@@ -24,7 +26,7 @@
 
 +(id)appModelWithName: (NSString *) anImName
               summary: (NSString *) aSummary
-              imImage: (UIImage*) anImImage
+              imImage: (NSURL*) anImImage
                  appCompanyWeb: (NSURL*) anAppCompanyWeb
                rights: (NSString *) aRights
              category: (NSString *) aCategory
@@ -36,7 +38,7 @@
 
 -(id) initWithImName: (NSString *) anImName
              summary: (NSString *) aSummary
-             imImage: (UIImage*) anImImage
+             imImage: (NSURL*) anImImage
                 appCompanyWeb: (NSURL*) anAppCompanyWeb
               rights: (NSString *) aRights
             category: (NSString *) aCategory

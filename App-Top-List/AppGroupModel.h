@@ -11,6 +11,8 @@
 @interface AppGroupModel : NSObject
 
 @property (readonly, nonatomic) NSUInteger appCounts;
+@property (strong, nonatomic) NSMutableArray *appArrays;
+
 
 
 -(AppModel *)appCounAtIndex: (NSUInteger) index;

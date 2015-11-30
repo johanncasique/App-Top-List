@@ -15,6 +15,9 @@
 
 @interface AppListTableViewController ()
 
+@property (strong, nonatomic) NSDictionary *tableDic;
+@property (strong, nonatomic) NSMutableArray *array;
+
 @end
 
 @implementation AppListTableViewController
@@ -23,7 +26,7 @@
              Style: (UITableViewStyle) aStyle{
     if (self = [super initWithStyle:aStyle]) {
         _model = aModel;
-        self.title = @"App List test";
+        self.title = @"Free Top Apps";
     }
     return self;
 }
@@ -36,6 +39,11 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+//    [[self tableView]setDelegate:self];
+//    [[self tableView]setDataSource:self];
+    
+    
+    self.tableView.tableHeaderView.tintColor = [UIColor whiteColor];
     
 
 }
@@ -54,10 +62,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //#warning Incomplete implementation, return the number of rows
-    return self.model.appCounts;
+    
+    NSUInteger count = 0;
+    
+    count = self.model.appCounts;
 
-        
-        
+    return count;
+    
 }
 
 
@@ -67,27 +78,31 @@
     
     static NSString *cellIdentifier = @"AppListCell";
     
-
     
-    AppListTableViewCell *cell = (AppListTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (cell == nil) {
+ 
+    
+    AppListTableViewCell *appCell = (AppListTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (appCell == nil) {
 
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AppListCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
+        appCell = [nib objectAtIndex:0];
     }
     
     // Configure the cell...
     
-    
-    AppModel *model = nil;
-    
-    model = [self.model appCounAtIndex:indexPath.row];
+    AppModel *modelApp = nil;
     
     
-    cell.nameCell.text = model.imName;
-    cell.imageCell.image = model.imImage;
+    modelApp = [self.model appCounAtIndex:indexPath.row];
     
-    return cell;
+    
+    
+    appCell.nameCell.text = modelApp.imName;
+    appCell.imageCell.image = modelApp.photo;
+   
+
+    
+    return appCell;
 
 }
 
@@ -96,7 +111,9 @@
     return 80;
 }
 
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
     AppModel *model = [[AppModel alloc] init];
@@ -108,9 +125,8 @@
     [self.navigationController pushViewController:viewApp animated:YES];
     
     
-    
-    
 }
+
 
 /*
 // Override to support conditional editing of the table view.
