@@ -9,8 +9,9 @@
 #import "AppDelegate.h"
 #import "AppModel.h"
 #import "AppViewController.h"
-#import "AppGroupModel.h"
+#import "AppSpainStore.h"
 #import "AppListTableViewController.h"
+
 
 
 @interface AppDelegate ()
@@ -23,11 +24,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    AppGroupModel *groupModel = [[AppGroupModel alloc] init];
+    AppSpainStore *spainStore = [[AppSpainStore alloc] init];
 
+   
     
-    AppListTableViewController *appGroupVC = [[AppListTableViewController alloc] initWithModel:groupModel
-                                                                                      Style:UITableViewStylePlain];
+   AppListTableViewController *appGroupVC = [[AppListTableViewController alloc] initWithModel:spainStore
+                                                                                     Style:UITableViewStylePlain];
     
 
     UINavigationController *tabVC = [[UINavigationController alloc] initWithRootViewController:appGroupVC];

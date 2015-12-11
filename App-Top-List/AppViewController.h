@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *companyName;
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 
+@property (weak, nonatomic) IBOutlet UIButton *getApp;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 - (IBAction)appWeb:(id)sender;
 

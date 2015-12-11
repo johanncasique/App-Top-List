@@ -9,7 +9,7 @@
 #import "AppListTableViewController.h"
 #import "AppViewController.h"
 #import "AppModel.h"
-#import "AppGroupModel.h"
+#import "AppSpainStore.h"
 #import "AppListTableViewCell.h"
 #import <AFNetworking.h>
 
@@ -22,10 +22,10 @@
 
 @implementation AppListTableViewController
 
--(id)initWithModel: (AppGroupModel*) aModel
+-(id)initWithModel: (AppSpainStore*) aModel
              Style: (UITableViewStyle) aStyle{
     if (self = [super initWithStyle:aStyle]) {
-        _model = aModel;
+        aModel = aModel;
         self.title = @"Free Top Apps";
     }
     return self;
@@ -43,7 +43,8 @@
 //    [[self tableView]setDataSource:self];
     
     
-    self.tableView.tableHeaderView.tintColor = [UIColor whiteColor];
+    self.tableView.tableHeaderView.backgroundColor = [UIColor whiteColor];
+
     
 
 }
@@ -95,11 +96,17 @@
     
     modelApp = [self.model appCounAtIndex:indexPath.row];
     
-    
+
     
     appCell.nameCell.text = modelApp.imName;
     appCell.imageCell.image = modelApp.photo;
-   
+    appCell.companyName.text = modelApp.company;
+    [appCell.imageCell.layer setCornerRadius:15];
+    [appCell.imageCell.layer setMasksToBounds:YES];
+    appCell.contentView.backgroundColor =  [UIColor colorWithRed:71/255.0
+                                                           green:69/255.0
+                                                            blue:69/255.0
+                                                           alpha:0.89];
 
     
     return appCell;
@@ -110,6 +117,8 @@
     
     return 80;
 }
+
+
 
 
 

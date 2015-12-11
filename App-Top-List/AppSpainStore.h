@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AppModel.h"
-@interface AppGroupModel : NSObject
+@interface AppSpainStore: NSObject
 
 @property (readonly, nonatomic) NSUInteger appCounts;
 @property (strong, nonatomic) NSMutableArray *appArrays;

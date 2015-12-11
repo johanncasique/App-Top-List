@@ -39,7 +39,7 @@
     [self syncModelWithView];
     
     
-    
+   
  
   
 }
@@ -78,7 +78,18 @@
     
     [self.summary setNumberOfLines:0];
     
-
+    [self.iconImage.layer setCornerRadius:15];
+    [self.iconImage.layer setMasksToBounds:YES];
+    
+    
+    
+    [self.getApp.layer setCornerRadius:15];
+    [self.getApp.layer setBorderWidth:1.5];
+    [self.getApp.layer setBorderColor:[UIColor colorWithRed:31/255.0
+                                                      green:137/255.0
+                                                       blue:247/255.0
+                                                      alpha:1].CGColor];
+    
 
     
 }
@@ -90,6 +101,7 @@
     
     [self.navigationController pushViewController:webView
                                          animated:YES];
+    
     
     
     

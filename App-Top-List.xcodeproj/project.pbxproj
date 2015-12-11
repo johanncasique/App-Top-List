@@ -7,15 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		125903631C070C100019C6AC /* googleMaps.png in Resources */ = {isa = PBXBuildFile; fileRef = 1259035A1C070C100019C6AC /* googleMaps.png */; };
-		125903641C070C100019C6AC /* layoutForInstagram.png in Resources */ = {isa = PBXBuildFile; fileRef = 1259035B1C070C100019C6AC /* layoutForInstagram.png */; };
-		125903651C070C100019C6AC /* mzstatic.png in Resources */ = {isa = PBXBuildFile; fileRef = 1259035C1C070C100019C6AC /* mzstatic.png */; };
-		125903661C070C100019C6AC /* netflix.png in Resources */ = {isa = PBXBuildFile; fileRef = 1259035D1C070C100019C6AC /* netflix.png */; };
-		125903671C070C100019C6AC /* pinterest.png in Resources */ = {isa = PBXBuildFile; fileRef = 1259035E1C070C100019C6AC /* pinterest.png */; };
-		125903681C070C100019C6AC /* realBoxing.png in Resources */ = {isa = PBXBuildFile; fileRef = 1259035F1C070C100019C6AC /* realBoxing.png */; };
-		125903691C070C100019C6AC /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 125903601C070C100019C6AC /* twitter.png */; };
-		1259036A1C070C100019C6AC /* uber.png in Resources */ = {isa = PBXBuildFile; fileRef = 125903611C070C100019C6AC /* uber.png */; };
-		1259036B1C070C100019C6AC /* waze.png in Resources */ = {isa = PBXBuildFile; fileRef = 125903621C070C100019C6AC /* waze.png */; };
 		1259036E1C0779510019C6AC /* AppViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1259036D1C0779510019C6AC /* AppViewController~ipad.xib */; };
 		128247BD1C0372700019C6AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 128247BC1C0372700019C6AC /* main.m */; };
 		128247C01C0372700019C6AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 128247BF1C0372700019C6AC /* AppDelegate.m */; };
@@ -25,34 +16,16 @@
 		128247D41C0372B00019C6AC /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 128247D31C0372B00019C6AC /* AppModel.m */; };
 		128247D81C0377440019C6AC /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 128247D61C0377440019C6AC /* AppViewController.m */; };
 		128247D91C0377440019C6AC /* AppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 128247D71C0377440019C6AC /* AppViewController.xib */; };
-		128247DB1C037C500019C6AC /* 100x100bb-85.png in Resources */ = {isa = PBXBuildFile; fileRef = 128247DA1C037C500019C6AC /* 100x100bb-85.png */; };
-		128247DF1C037DF70019C6AC /* AppGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 128247DE1C037DF70019C6AC /* AppGroupModel.m */; };
+		128247DF1C037DF70019C6AC /* AppSpainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 128247DE1C037DF70019C6AC /* AppSpainStore.m */; };
 		128247E21C0381050019C6AC /* AppListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 128247E11C0381050019C6AC /* AppListTableViewController.m */; };
 		128247E61C03B9CF0019C6AC /* AppListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 128247E51C03B9CF0019C6AC /* AppListCell.xib */; };
 		128247E91C03BAE80019C6AC /* AppListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 128247E81C03BAE80019C6AC /* AppListTableViewCell.m */; };
 		12C2CDFD1C0490FE0019C6AC /* AppWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C2CDFB1C0490FE0019C6AC /* AppWebViewController.m */; };
 		12C2CDFE1C0490FE0019C6AC /* AppWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12C2CDFC1C0490FE0019C6AC /* AppWebViewController.xib */; };
-		12C2CE001C049C950019C6AC /* 75x75bb-85.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C2CDFF1C049C950019C6AC /* 75x75bb-85.png */; };
-		12C2CE021C049E000019C6AC /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C2CE011C049E000019C6AC /* facebook.png */; };
-		12C2CE041C049EB80019C6AC /* youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C2CE031C049EB80019C6AC /* youtube.png */; };
-		12C2CE061C049F680019C6AC /* snapchat.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C2CE051C049F680019C6AC /* snapchat.png */; };
-		12C2CE081C04A1CD0019C6AC /* itunesU.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C2CE071C04A1CD0019C6AC /* itunesU.png */; };
-		12C2CE0A1C04A2970019C6AC /* pandora.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C2CE091C04A2970019C6AC /* pandora.png */; };
-		12C2CE0C1C04A35E0019C6AC /* amazon.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C2CE0B1C04A35E0019C6AC /* amazon.png */; };
-		12C2CE0E1C04A3F30019C6AC /* pixels.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C2CE0D1C04A3F30019C6AC /* pixels.png */; };
 		E714192F274927B2E59D7F29 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 656A9AF06E855CC11B393046 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1259035A1C070C100019C6AC /* googleMaps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = googleMaps.png; sourceTree = "<group>"; };
-		1259035B1C070C100019C6AC /* layoutForInstagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = layoutForInstagram.png; sourceTree = "<group>"; };
-		1259035C1C070C100019C6AC /* mzstatic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mzstatic.png; sourceTree = "<group>"; };
-		1259035D1C070C100019C6AC /* netflix.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = netflix.png; sourceTree = "<group>"; };
-		1259035E1C070C100019C6AC /* pinterest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinterest.png; sourceTree = "<group>"; };
-		1259035F1C070C100019C6AC /* realBoxing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = realBoxing.png; sourceTree = "<group>"; };
-		125903601C070C100019C6AC /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
-		125903611C070C100019C6AC /* uber.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uber.png; sourceTree = "<group>"; };
-		125903621C070C100019C6AC /* waze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waze.png; sourceTree = "<group>"; };
 		1259036C1C071C350019C6AC /* AppTopListPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppTopListPrefix.pch; sourceTree = "<group>"; };
 		1259036D1C0779510019C6AC /* AppViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "AppViewController~ipad.xib"; sourceTree = "<group>"; };
 		128247B81C0372700019C6AC /* App-Top-List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App-Top-List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,9 +41,8 @@
 		128247D51C0377440019C6AC /* AppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppViewController.h; sourceTree = "<group>"; };
 		128247D61C0377440019C6AC /* AppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppViewController.m; sourceTree = "<group>"; };
 		128247D71C0377440019C6AC /* AppViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppViewController.xib; sourceTree = "<group>"; };
-		128247DA1C037C500019C6AC /* 100x100bb-85.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "100x100bb-85.png"; sourceTree = "<group>"; };
-		128247DD1C037DF70019C6AC /* AppGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGroupModel.h; sourceTree = "<group>"; };
-		128247DE1C037DF70019C6AC /* AppGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGroupModel.m; sourceTree = "<group>"; };
+		128247DD1C037DF70019C6AC /* AppSpainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSpainStore.h; sourceTree = "<group>"; };
+		128247DE1C037DF70019C6AC /* AppSpainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSpainStore.m; sourceTree = "<group>"; };
 		128247E01C0381050019C6AC /* AppListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppListTableViewController.h; sourceTree = "<group>"; };
 		128247E11C0381050019C6AC /* AppListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppListTableViewController.m; sourceTree = "<group>"; };
 		128247E51C03B9CF0019C6AC /* AppListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppListCell.xib; sourceTree = "<group>"; };
@@ -79,14 +51,6 @@
 		12C2CDFA1C0490FE0019C6AC /* AppWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppWebViewController.h; sourceTree = "<group>"; };
 		12C2CDFB1C0490FE0019C6AC /* AppWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppWebViewController.m; sourceTree = "<group>"; };
 		12C2CDFC1C0490FE0019C6AC /* AppWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppWebViewController.xib; sourceTree = "<group>"; };
-		12C2CDFF1C049C950019C6AC /* 75x75bb-85.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "75x75bb-85.png"; sourceTree = "<group>"; };
-		12C2CE011C049E000019C6AC /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
-		12C2CE031C049EB80019C6AC /* youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youtube.png; sourceTree = "<group>"; };
-		12C2CE051C049F680019C6AC /* snapchat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snapchat.png; sourceTree = "<group>"; };
-		12C2CE071C04A1CD0019C6AC /* itunesU.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = itunesU.png; sourceTree = "<group>"; };
-		12C2CE091C04A2970019C6AC /* pandora.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pandora.png; sourceTree = "<group>"; };
-		12C2CE0B1C04A35E0019C6AC /* amazon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amazon.png; sourceTree = "<group>"; };
-		12C2CE0D1C04A3F30019C6AC /* pixels.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pixels.png; sourceTree = "<group>"; };
 		656A9AF06E855CC11B393046 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7270968215555BD0392D93B9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BCFEF7906986B33D27149EF1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,24 +108,6 @@
 		128247BA1C0372700019C6AC /* App-Top-List */ = {
 			isa = PBXGroup;
 			children = (
-				1259035A1C070C100019C6AC /* googleMaps.png */,
-				1259035B1C070C100019C6AC /* layoutForInstagram.png */,
-				1259035C1C070C100019C6AC /* mzstatic.png */,
-				1259035D1C070C100019C6AC /* netflix.png */,
-				1259035E1C070C100019C6AC /* pinterest.png */,
-				1259035F1C070C100019C6AC /* realBoxing.png */,
-				125903601C070C100019C6AC /* twitter.png */,
-				125903611C070C100019C6AC /* uber.png */,
-				125903621C070C100019C6AC /* waze.png */,
-				12C2CE0D1C04A3F30019C6AC /* pixels.png */,
-				12C2CE0B1C04A35E0019C6AC /* amazon.png */,
-				12C2CE091C04A2970019C6AC /* pandora.png */,
-				12C2CE071C04A1CD0019C6AC /* itunesU.png */,
-				12C2CE051C049F680019C6AC /* snapchat.png */,
-				12C2CE031C049EB80019C6AC /* youtube.png */,
-				12C2CE011C049E000019C6AC /* facebook.png */,
-				12C2CDFF1C049C950019C6AC /* 75x75bb-85.png */,
-				128247DA1C037C500019C6AC /* 100x100bb-85.png */,
 				128247BE1C0372700019C6AC /* AppDelegate.h */,
 				128247BF1C0372700019C6AC /* AppDelegate.m */,
 				128247C41C0372700019C6AC /* Main.storyboard */,
@@ -189,8 +135,8 @@
 			children = (
 				128247D21C0372B00019C6AC /* AppModel.h */,
 				128247D31C0372B00019C6AC /* AppModel.m */,
-				128247DD1C037DF70019C6AC /* AppGroupModel.h */,
-				128247DE1C037DF70019C6AC /* AppGroupModel.m */,
+				128247DD1C037DF70019C6AC /* AppSpainStore.h */,
+				128247DE1C037DF70019C6AC /* AppSpainStore.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -246,6 +192,7 @@
 				TargetAttributes = {
 					128247B71C0372700019C6AC = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = X346948PH8;
 					};
 				};
 			};
@@ -273,30 +220,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				128247E61C03B9CF0019C6AC /* AppListCell.xib in Resources */,
-				125903681C070C100019C6AC /* realBoxing.png in Resources */,
-				1259036B1C070C100019C6AC /* waze.png in Resources */,
 				128247CB1C0372700019C6AC /* LaunchScreen.storyboard in Resources */,
-				128247DB1C037C500019C6AC /* 100x100bb-85.png in Resources */,
-				12C2CE041C049EB80019C6AC /* youtube.png in Resources */,
-				12C2CE001C049C950019C6AC /* 75x75bb-85.png in Resources */,
-				12C2CE021C049E000019C6AC /* facebook.png in Resources */,
-				12C2CE0A1C04A2970019C6AC /* pandora.png in Resources */,
-				125903661C070C100019C6AC /* netflix.png in Resources */,
 				128247C81C0372700019C6AC /* Assets.xcassets in Resources */,
-				12C2CE081C04A1CD0019C6AC /* itunesU.png in Resources */,
 				128247D91C0377440019C6AC /* AppViewController.xib in Resources */,
-				12C2CE061C049F680019C6AC /* snapchat.png in Resources */,
-				12C2CE0C1C04A35E0019C6AC /* amazon.png in Resources */,
 				128247C61C0372700019C6AC /* Main.storyboard in Resources */,
-				125903671C070C100019C6AC /* pinterest.png in Resources */,
-				12C2CE0E1C04A3F30019C6AC /* pixels.png in Resources */,
-				125903691C070C100019C6AC /* twitter.png in Resources */,
-				125903651C070C100019C6AC /* mzstatic.png in Resources */,
 				12C2CDFE1C0490FE0019C6AC /* AppWebViewController.xib in Resources */,
-				1259036A1C070C100019C6AC /* uber.png in Resources */,
-				125903641C070C100019C6AC /* layoutForInstagram.png in Resources */,
 				1259036E1C0779510019C6AC /* AppViewController~ipad.xib in Resources */,
-				125903631C070C100019C6AC /* googleMaps.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +290,7 @@
 				128247E91C03BAE80019C6AC /* AppListTableViewCell.m in Sources */,
 				128247BD1C0372700019C6AC /* main.m in Sources */,
 				128247D41C0372B00019C6AC /* AppModel.m in Sources */,
-				128247DF1C037DF70019C6AC /* AppGroupModel.m in Sources */,
+				128247DF1C037DF70019C6AC /* AppSpainStore.m in Sources */,
 				12C2CDFD1C0490FE0019C6AC /* AppWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +404,7 @@
 			baseConfigurationReference = BCFEF7906986B33D27149EF1 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "App-Top-List/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -488,6 +418,7 @@
 			baseConfigurationReference = 7270968215555BD0392D93B9 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "App-Top-List/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

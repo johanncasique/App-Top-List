@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AppGroupModel.h"
+#import "AppSpainStore.h"
 
 @interface AppListTableViewController : UITableViewController
 
 
-@property (strong, nonatomic) AppGroupModel *model;
+@property (strong, nonatomic) AppSpainStore *model;
 
--(id)initWithModel: (AppGroupModel*) aModel
+-(id)initWithModel: (AppSpainStore*) aModel
              Style: (UITableViewStyle) aStyle;
 
 @end

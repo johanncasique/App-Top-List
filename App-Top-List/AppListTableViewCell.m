@@ -12,6 +12,7 @@
 
 @synthesize nameCell = _nameCell;
 @synthesize imageCell = _imageCell;
+@synthesize companyName =_companyName;
 
 - (void)awakeFromNib {
     // Initialization code
