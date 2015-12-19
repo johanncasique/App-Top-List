@@ -17,6 +17,8 @@
 
 @synthesize appArrays = _appArrays;
 
+
+
 -(NSUInteger)appCounts{
     
     
@@ -39,25 +41,28 @@
         
         NSError *error;
         
-        NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+        
+        NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse: &response error: &error];
+        
+       
         
         if (data != nil) {
             
-            NSDictionary *JSONObjects = [NSJSONSerialization JSONObjectWithData:data
-                                                                   options:kNilOptions
-                                                                     error:&error];
+            NSDictionary *freeAppsJSON = [NSJSONSerialization JSONObjectWithData:data
+                                                                         options: kNilOptions
+                                                                           error: &error];
             
             
             
-            
-         if (JSONObjects != nil) {
+         if (freeAppsJSON != nil) {
                 
-             NSDictionary *feed = [JSONObjects objectForKey:@"feed"];
+             NSDictionary *feed = [freeAppsJSON objectForKey:@"feed"];
              
              NSArray *entry = [feed objectForKey:@"entry"];
                 
                 
                 for (NSDictionary *dic in entry) {
+          
                     
              
                   AppModel *model = [[AppModel alloc] initWithDictionary:dic];
@@ -68,14 +73,21 @@
                         [self.appArrays addObject:model];
                     }
              
-                
-                   
-                    
-                    
                 }
                 
                     }
       }
+        
+        
+        
+        
+        
+        
+
+        
+        
+        
+        
 
 
   }
@@ -83,7 +95,10 @@
     
 }
 
+
+
         
+
 
 
 
@@ -91,7 +106,7 @@
 
 -(AppModel *)appCounAtIndex: (NSUInteger) index{
         
-        
+    
     return [self.appArrays objectAtIndex:index];
     
     }

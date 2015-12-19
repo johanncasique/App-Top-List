@@ -66,6 +66,10 @@
 
 -(void)syncModelWithView{
     
+    
+
+    
+    
     self.name.text = self.model.imName;
     self.summary.text = self.model.summary;
     self.rights.text = self.model.rights;
@@ -74,9 +78,11 @@
     self.releaseDate.text = self.model.releaseDate;
     self.category.text = self.model.category;
     
+
   
-    
+   
     [self.summary setNumberOfLines:0];
+    
     
     [self.iconImage.layer setCornerRadius:15];
     [self.iconImage.layer setMasksToBounds:YES];

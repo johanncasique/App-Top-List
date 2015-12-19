@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1259036E1C0779510019C6AC /* AppViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1259036D1C0779510019C6AC /* AppViewController~ipad.xib */; };
+		125A3EBD1C1B40E00019C6AC /* GlobalAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 125A3EBB1C1B40E00019C6AC /* GlobalAppViewController.m */; };
+		125A3EBE1C1B40E00019C6AC /* GlobalAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125A3EBC1C1B40E00019C6AC /* GlobalAppViewController.xib */; };
+		125A3EC11C1B46EB0019C6AC /* AppUSStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 125A3EC01C1B46EB0019C6AC /* AppUSStore.m */; };
+		125A3EC41C1B48730019C6AC /* USStoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 125A3EC31C1B48730019C6AC /* USStoreTableViewController.m */; };
 		128247BD1C0372700019C6AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 128247BC1C0372700019C6AC /* main.m */; };
 		128247C01C0372700019C6AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 128247BF1C0372700019C6AC /* AppDelegate.m */; };
 		128247C61C0372700019C6AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 128247C41C0372700019C6AC /* Main.storyboard */; };
@@ -20,14 +24,22 @@
 		128247E21C0381050019C6AC /* AppListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 128247E11C0381050019C6AC /* AppListTableViewController.m */; };
 		128247E61C03B9CF0019C6AC /* AppListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 128247E51C03B9CF0019C6AC /* AppListCell.xib */; };
 		128247E91C03BAE80019C6AC /* AppListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 128247E81C03BAE80019C6AC /* AppListTableViewCell.m */; };
+		12B4839A1C2076390019C6AC /* AppGrossing.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B483991C2076390019C6AC /* AppGrossing.m */; };
+		12B4839D1C2078110019C6AC /* AppGrossingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B4839C1C2078110019C6AC /* AppGrossingTableViewController.m */; };
 		12C2CDFD1C0490FE0019C6AC /* AppWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C2CDFB1C0490FE0019C6AC /* AppWebViewController.m */; };
 		12C2CDFE1C0490FE0019C6AC /* AppWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12C2CDFC1C0490FE0019C6AC /* AppWebViewController.xib */; };
-		E714192F274927B2E59D7F29 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 656A9AF06E855CC11B393046 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1259036C1C071C350019C6AC /* AppTopListPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppTopListPrefix.pch; sourceTree = "<group>"; };
 		1259036D1C0779510019C6AC /* AppViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "AppViewController~ipad.xib"; sourceTree = "<group>"; };
+		125A3EBA1C1B40E00019C6AC /* GlobalAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalAppViewController.h; sourceTree = "<group>"; };
+		125A3EBB1C1B40E00019C6AC /* GlobalAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalAppViewController.m; sourceTree = "<group>"; };
+		125A3EBC1C1B40E00019C6AC /* GlobalAppViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GlobalAppViewController.xib; sourceTree = "<group>"; };
+		125A3EBF1C1B46EB0019C6AC /* AppUSStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUSStore.h; sourceTree = "<group>"; };
+		125A3EC01C1B46EB0019C6AC /* AppUSStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUSStore.m; sourceTree = "<group>"; };
+		125A3EC21C1B48730019C6AC /* USStoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USStoreTableViewController.h; sourceTree = "<group>"; };
+		125A3EC31C1B48730019C6AC /* USStoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USStoreTableViewController.m; sourceTree = "<group>"; };
 		128247B81C0372700019C6AC /* App-Top-List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App-Top-List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		128247BC1C0372700019C6AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		128247BE1C0372700019C6AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,6 +60,10 @@
 		128247E51C03B9CF0019C6AC /* AppListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppListCell.xib; sourceTree = "<group>"; };
 		128247E71C03BAE80019C6AC /* AppListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppListTableViewCell.h; sourceTree = "<group>"; };
 		128247E81C03BAE80019C6AC /* AppListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppListTableViewCell.m; sourceTree = "<group>"; };
+		12B483981C2076390019C6AC /* AppGrossing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGrossing.h; sourceTree = "<group>"; };
+		12B483991C2076390019C6AC /* AppGrossing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGrossing.m; sourceTree = "<group>"; };
+		12B4839B1C2078110019C6AC /* AppGrossingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGrossingTableViewController.h; sourceTree = "<group>"; };
+		12B4839C1C2078110019C6AC /* AppGrossingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGrossingTableViewController.m; sourceTree = "<group>"; };
 		12C2CDFA1C0490FE0019C6AC /* AppWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppWebViewController.h; sourceTree = "<group>"; };
 		12C2CDFB1C0490FE0019C6AC /* AppWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppWebViewController.m; sourceTree = "<group>"; };
 		12C2CDFC1C0490FE0019C6AC /* AppWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppWebViewController.xib; sourceTree = "<group>"; };
@@ -61,7 +77,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E714192F274927B2E59D7F29 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,13 @@
 				12C2CDFA1C0490FE0019C6AC /* AppWebViewController.h */,
 				12C2CDFB1C0490FE0019C6AC /* AppWebViewController.m */,
 				12C2CDFC1C0490FE0019C6AC /* AppWebViewController.xib */,
+				125A3EBA1C1B40E00019C6AC /* GlobalAppViewController.h */,
+				125A3EBB1C1B40E00019C6AC /* GlobalAppViewController.m */,
+				125A3EBC1C1B40E00019C6AC /* GlobalAppViewController.xib */,
+				125A3EC21C1B48730019C6AC /* USStoreTableViewController.h */,
+				125A3EC31C1B48730019C6AC /* USStoreTableViewController.m */,
+				12B4839B1C2078110019C6AC /* AppGrossingTableViewController.h */,
+				12B4839C1C2078110019C6AC /* AppGrossingTableViewController.m */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -137,6 +159,10 @@
 				128247D31C0372B00019C6AC /* AppModel.m */,
 				128247DD1C037DF70019C6AC /* AppSpainStore.h */,
 				128247DE1C037DF70019C6AC /* AppSpainStore.m */,
+				125A3EBF1C1B46EB0019C6AC /* AppUSStore.h */,
+				125A3EC01C1B46EB0019C6AC /* AppUSStore.m */,
+				12B483981C2076390019C6AC /* AppGrossing.h */,
+				12B483991C2076390019C6AC /* AppGrossing.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -224,6 +250,7 @@
 				128247C81C0372700019C6AC /* Assets.xcassets in Resources */,
 				128247D91C0377440019C6AC /* AppViewController.xib in Resources */,
 				128247C61C0372700019C6AC /* Main.storyboard in Resources */,
+				125A3EBE1C1B40E00019C6AC /* GlobalAppViewController.xib in Resources */,
 				12C2CDFE1C0490FE0019C6AC /* AppWebViewController.xib in Resources */,
 				1259036E1C0779510019C6AC /* AppViewController~ipad.xib in Resources */,
 			);
@@ -285,13 +312,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				128247D81C0377440019C6AC /* AppViewController.m in Sources */,
+				12B4839A1C2076390019C6AC /* AppGrossing.m in Sources */,
+				125A3EC41C1B48730019C6AC /* USStoreTableViewController.m in Sources */,
 				128247E21C0381050019C6AC /* AppListTableViewController.m in Sources */,
 				128247C01C0372700019C6AC /* AppDelegate.m in Sources */,
 				128247E91C03BAE80019C6AC /* AppListTableViewCell.m in Sources */,
 				128247BD1C0372700019C6AC /* main.m in Sources */,
+				12B4839D1C2078110019C6AC /* AppGrossingTableViewController.m in Sources */,
 				128247D41C0372B00019C6AC /* AppModel.m in Sources */,
+				125A3EBD1C1B40E00019C6AC /* GlobalAppViewController.m in Sources */,
 				128247DF1C037DF70019C6AC /* AppSpainStore.m in Sources */,
 				12C2CDFD1C0490FE0019C6AC /* AppWebViewController.m in Sources */,
+				125A3EC11C1B46EB0019C6AC /* AppUSStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,36 +1,41 @@
 //
-//  AppListTableViewController.m
+//  AppGrossingTableViewController.m
 //  App-Top-List
 //
-//  Created by johann casique on 23/11/15.
+//  Created by johann casique on 15/12/15.
 //  Copyright © 2015 johann casique. All rights reserved.
 //
 
-#import "AppListTableViewController.h"
-#import "AppViewController.h"
-#import "AppModel.h"
-#import "AppSpainStore.h"
+#import "AppGrossingTableViewController.h"
+#import "AppGrossing.h"
 #import "AppListTableViewCell.h"
-#import <AFNetworking.h>
+#import "AppModel.h"
+#import "AppViewController.h"
 
-@interface AppListTableViewController ()
-
-@property (strong, nonatomic) NSDictionary *tableDic;
-@property (strong, nonatomic) NSMutableArray *array;
+@interface AppGrossingTableViewController ()
 
 @end
 
-@implementation AppListTableViewController
+@implementation AppGrossingTableViewController
 
--(id)initWithModel: (AppSpainStore*) aModel
+
+-(id)initWithModel: (AppGrossing *) aModel
              Style: (UITableViewStyle) aStyle{
+    
+    
     if (self = [super initWithStyle:aStyle]) {
-        _model = aModel;
-        self.title = @"Free Apps";
         
+        _model = aModel;
+        self.title = @"Top Grossing App";
     }
+    
+    
     return self;
 }
+
+
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,14 +45,13 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-//    [[self tableView]setDelegate:self];
-//    [[self tableView]setDataSource:self];
     
     
-    self.tableView.tableHeaderView.backgroundColor = [UIColor whiteColor];
-
-   
-
+    
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,57 +67,55 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete implementation, return the number of rows
-    
+
+   
     NSUInteger count = 0;
     
     count = self.model.appCounts;
-
+    
     return count;
     
 }
 
 
-
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+   
+    static NSString *cellIdentifier = @"AppGrossingTable";
     
-    static NSString *cellIdentifier = @"AppListCell";
+    AppModel *cellModel = nil;
+    
+    cellModel = [self.model appCountAtIndex:indexPath.row];
     
     
- 
+    AppListTableViewCell *viewCell = (AppListTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    AppListTableViewCell *appCell = (AppListTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (appCell == nil) {
-
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AppListCell" owner:self options:nil];
-        appCell = [nib objectAtIndex:0];
+    if (viewCell == nil) {
+        
+        
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AppListCell" owner:self options: nil];
+        viewCell = [nib objectAtIndex:0];
+        
+        
     }
     
     // Configure the cell...
     
-    AppModel *modelApp = nil;
     
-    
-    modelApp = [self.model appCounAtIndex:indexPath.row];
-    
-
-    
-    appCell.nameCell.text = modelApp.imName;
-    appCell.imageCell.image = modelApp.photo;
-
-    appCell.companyName.text = modelApp.company;
-    [appCell.imageCell.layer setCornerRadius:15];
-    [appCell.imageCell.layer setMasksToBounds:YES];
-    appCell.contentView.backgroundColor =  [UIColor colorWithRed:71/255.0
+    viewCell.nameCell.text = cellModel.imName;
+    viewCell.imageCell.image = cellModel.photo;
+    viewCell.companyName.text = cellModel.company;
+    [viewCell.imageCell.layer setCornerRadius:15];
+    [viewCell.imageCell.layer setMasksToBounds:YES];
+    viewCell.contentView.backgroundColor =  [UIColor colorWithRed:71/255.0
                                                            green:69/255.0
                                                             blue:69/255.0
                                                            alpha:0.89];
-
     
-    return appCell;
-
+    
+    
+    return viewCell;
 }
+
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -121,22 +123,22 @@
 }
 
 
-
-
-
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    AppModel *model = nil;
     
-    AppModel *model = [[AppModel alloc] init];
+    model = [self.model appCountAtIndex:indexPath.row];
     
-    model = [self.model appCounAtIndex:indexPath.row];
     
-    AppViewController *viewApp = [[AppViewController alloc] initWithModel:model];
+    AppViewController *grossingVC = [[AppViewController alloc] initWithModel:model];
     
-    [self.navigationController pushViewController:viewApp animated:YES];
+    [self.navigationController pushViewController:grossingVC
+                                         animated:YES];
+    
     
     
 }
+
 
 
 /*

@@ -11,7 +11,11 @@
 #import "AppViewController.h"
 #import "AppSpainStore.h"
 #import "AppListTableViewController.h"
-
+#import "GlobalAppViewController.h"
+#import "AppUSStore.h"
+#import "USStoreTableViewController.h"
+#import "AppGrossing.h"
+#import "AppGrossingTableViewController.h"
 
 
 @interface AppDelegate ()
@@ -24,19 +28,33 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    AppSpainStore *spainStore = [[AppSpainStore alloc] init];
-
+   AppSpainStore *spainStore = [[AppSpainStore alloc] init];
+    AppUSStore *usStore = [[AppUSStore alloc] init];
+    AppGrossing *appGrossingStore = [[AppGrossing alloc] init];
    
     
-   AppListTableViewController *appGroupVC = [[AppListTableViewController alloc] initWithModel:spainStore
+    
+  AppListTableViewController *tableVC = [[AppListTableViewController alloc ] initWithModel:spainStore
                                                                                      Style:UITableViewStylePlain];
     
+    AppGrossingTableViewController *tableVC2 = [[AppGrossingTableViewController alloc] initWithModel:appGrossingStore
+                                                                                               Style: UITableViewStylePlain];
+    
+    
+//    GlobalAppViewController *globalVC = [[GlobalAppViewController alloc] initWithModel:spainStore];
+    
+    USStoreTableViewController *usStoreVC =[[USStoreTableViewController alloc] initWithModel:usStore
+                                                                                        Style:UITableViewStylePlain];
 
-    UINavigationController *tabVC = [[UINavigationController alloc] initWithRootViewController:appGroupVC];
+    UINavigationController *tabVC = [[UINavigationController alloc] initWithRootViewController:tableVC];
+    UINavigationController *tabVC2 = [[UINavigationController alloc] initWithRootViewController:usStoreVC];
+    UINavigationController *navVC3 = [[UINavigationController alloc] initWithRootViewController:tableVC2];
+    
+    UITabBarController *tabBC = [[UITabBarController alloc] init];
+    tabBC.viewControllers = @[tabVC, tabVC2, navVC3];
     
     
-    
-    self.window.rootViewController = tabVC;
+    self.window.rootViewController = tabBC;
     
     
     return YES;

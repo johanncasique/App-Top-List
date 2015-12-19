@@ -1,35 +1,42 @@
 //
-//  AppListTableViewController.m
+//  USStoreTableViewController.m
 //  App-Top-List
 //
-//  Created by johann casique on 23/11/15.
+//  Created by johann casique on 11/12/15.
 //  Copyright © 2015 johann casique. All rights reserved.
 //
 
-#import "AppListTableViewController.h"
-#import "AppViewController.h"
-#import "AppModel.h"
-#import "AppSpainStore.h"
+#import "USStoreTableViewController.h"
+#import "AppUSStore.h"
 #import "AppListTableViewCell.h"
-#import <AFNetworking.h>
+#import "AppViewController.h"
+#import "AppSpainStore.h"
 
-@interface AppListTableViewController ()
-
-@property (strong, nonatomic) NSDictionary *tableDic;
-@property (strong, nonatomic) NSMutableArray *array;
+@interface USStoreTableViewController ()
 
 @end
 
-@implementation AppListTableViewController
+@implementation USStoreTableViewController
 
--(id)initWithModel: (AppSpainStore*) aModel
+
+
+
+
+
+-(id)initWithModel: (AppUSStore*) anUSModel
              Style: (UITableViewStyle) aStyle{
+    
     if (self = [super initWithStyle:aStyle]) {
-        _model = aModel;
-        self.title = @"Free Apps";
+        
+        _USModel = anUSModel;
+        self.title = @"Paid Apps";
+        
         
     }
+    
     return self;
+    
+    
 }
 
 - (void)viewDidLoad {
@@ -37,17 +44,9 @@
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-    
+
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-//    [[self tableView]setDelegate:self];
-//    [[self tableView]setDataSource:self];
-    
-    
-    self.tableView.tableHeaderView.backgroundColor = [UIColor whiteColor];
-
-   
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,51 +57,43 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Incomplete implementation, return the number of sections
+
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete implementation, return the number of rows
+
     
     NSUInteger count = 0;
     
-    count = self.model.appCounts;
-
-    return count;
+    count = self.USModel.appCounts;
     
+    
+    return count;
 }
 
 
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+   
+    static NSString *cellIdentifier = @"USStoreListTable";
     
-    static NSString *cellIdentifier = @"AppListCell";
+    AppModel *model = nil;
     
-    
- 
+    model = [self.USModel appCounAtIndex:indexPath.row];
     
     AppListTableViewCell *appCell = (AppListTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (appCell == nil) {
-
+        
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AppListCell" owner:self options:nil];
         appCell = [nib objectAtIndex:0];
     }
     
-    // Configure the cell...
     
-    AppModel *modelApp = nil;
-    
-    
-    modelApp = [self.model appCounAtIndex:indexPath.row];
-    
-
-    
-    appCell.nameCell.text = modelApp.imName;
-    appCell.imageCell.image = modelApp.photo;
-
-    appCell.companyName.text = modelApp.company;
+    appCell.nameCell.text = model.imName;
+    appCell.imageCell.image = model.photo;
+    appCell.companyName.text = model.company;
     [appCell.imageCell.layer setCornerRadius:15];
     [appCell.imageCell.layer setMasksToBounds:YES];
     appCell.contentView.backgroundColor =  [UIColor colorWithRed:71/255.0
@@ -111,29 +102,29 @@
                                                            alpha:0.89];
 
     
+ 
+    
     return appCell;
-
 }
+
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     return 80;
 }
 
-
-
-
-
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
     AppModel *model = [[AppModel alloc] init];
     
-    model = [self.model appCounAtIndex:indexPath.row];
+    model = [self.USModel appCounAtIndex:indexPath.row];
     
-    AppViewController *viewApp = [[AppViewController alloc] initWithModel:model];
     
-    [self.navigationController pushViewController:viewApp animated:YES];
+    AppViewController *VC = [[AppViewController alloc] initWithModel:model];
+    
+    [self.navigationController pushViewController:VC
+                                         animated:YES];
     
     
 }
