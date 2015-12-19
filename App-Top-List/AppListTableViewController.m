@@ -25,9 +25,8 @@
 -(id)initWithModel: (AppSpainStore*) aModel
              Style: (UITableViewStyle) aStyle{
     if (self = [super initWithStyle:aStyle]) {
-        _model = aModel;
-        self.title = @"Free Apps";
-        
+        aModel = aModel;
+        self.title = @"Free Top Apps";
     }
     return self;
 }
@@ -46,7 +45,7 @@
     
     self.tableView.tableHeaderView.backgroundColor = [UIColor whiteColor];
 
-   
+    
 
 }
 
@@ -101,7 +100,6 @@
     
     appCell.nameCell.text = modelApp.imName;
     appCell.imageCell.image = modelApp.photo;
-
     appCell.companyName.text = modelApp.company;
     [appCell.imageCell.layer setCornerRadius:15];
     [appCell.imageCell.layer setMasksToBounds:YES];

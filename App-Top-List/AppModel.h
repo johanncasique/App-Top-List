@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @interface AppModel : NSObject
 

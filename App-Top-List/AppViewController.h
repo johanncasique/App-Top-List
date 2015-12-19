@@ -10,8 +10,6 @@
 #import "AppModel.h"
 
 @interface AppViewController : UIViewController
-
-
 @property (weak, nonatomic) IBOutlet UIView *subView;
 @property (weak, nonatomic) IBOutlet UILabel *category;
 @property (weak, nonatomic) IBOutlet UILabel *releaseDate;

@@ -8,20 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "AppModel.h"
-
-
 @interface AppSpainStore: NSObject
 
 @property (readonly, nonatomic) NSUInteger appCounts;
-
 @property (strong, nonatomic) NSMutableArray *appArrays;
 
 
 
-
 -(AppModel *)appCounAtIndex: (NSUInteger) index;
-
-
 
 @property (strong, nonatomic) NSString *feed;
 
